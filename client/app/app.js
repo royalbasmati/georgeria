@@ -1,4 +1,4 @@
-angular.module('georgeria', ['ui.router'])
+angular.module('georgeria', ['controllers', 'ui.router'])
 
 .config(function($stateProvider, $httpProvider, $urlRouterProvider) {
 
@@ -8,6 +8,14 @@ angular.module('georgeria', ['ui.router'])
     .state('home', {
       url: '/home',
       templateUrl: 'app/views/home.html',
+      controller: 'homeController'
+    });
+
+  $stateProvider
+    .state('gameCards', {
+      url: '/gameCards',
+      templateUrl: 'app/views/gameCards.html',
+      controller: 'gameCardsController'
     });
 
 });

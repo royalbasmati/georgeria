@@ -1,22 +1,33 @@
-/*@font-face {
-	font-family:"CRU-pokawin-Alize pencil";
-	src:url("CRU-pokawin-Alize_pencil-regular.eot?") format("eot"),url("CRU-pokawin-Alize_pencil-regular.woff") format("woff"),url("CRU-pokawin-Alize_pencil-regular.ttf") format("truetype"),url("CRU-pokawin-Alize_pencil-regular.svg#CRU-pokawin-Alizepencil") format("svg");
-	font-weight:normal;
-	font-style:normal;
-}*/
+
 
 body {
-	background-image: url('/assets/george.jpg');
-	background-repeat: no-repeat;
-	/*background-position: right top;*/
-    /*background-attachment: fixed;*/
-	background-size: 100%;
+	background-color: #F4F2F4;
 }
 
 .title {
   align-content: center;
 }
 
-.video {
-  
+.george {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.game-card {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+table {
+  border: 5px solid black;
+}
+
+@media print {
+  .george, .nav {
+    display: none;
+  }
 }
