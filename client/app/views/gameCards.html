@@ -1,191 +1,596 @@
 <div ng-controller='gameCardsController'>
+
   <!-- Game Card Table -->
+  <div class= 'container'>
+      <ul class= 'nav nav-pills nav-fill' style="background-color: #95F2D9;">
+        <li class='nav-item'>
+          <a class="nav-link" ng-click="gamePrint()" href='#' >Click To Print</a>
+        </li>
+        <li class='nav-item'>
+          <a class="nav-link" ng-click="play()" href='#' >Play</a>
+        </li>
+        <li class='nav-item'>
+          <a class="nav-link" href="#">Upload</a>
+        </li>
+        <li class='nav-item'>
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+  </div>
   <div class= 'container game-card'>
+    <div >Georgeria: A Fun Family Bingo Game!</div>
     <table border='1'>
       <tr>
         <td>
-          <img src="http://www.johnlund.com/Images/Elephant-in-the-bar-picture-Photo.jpg" width="133" height="169" alt="70 Dayton St">
+          <img ng-src="{{images[0]}}" width="133" height="169" alt='{{images}}'>
         </td>
         <td>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Turtle3m.JPG" width="133" height="169" alt="70 Dayton St">
+          <img ng-src="{{images[1]}}" width="133" height="169" alt="70 Dayton St">
         </td>
         <td>
-          <img src="http://ichef.bbci.co.uk/naturelibrary/images/ic/credit/640x395/s/sw/swan/swan_1.jpg" width="133" height="169" alt="70 Dayton St">
+          <img ng-src="{{images[2]}}" width="133" height="169" alt="70 Dayton St">
         </td>
         <td>
-          <img src="http://earthguide.ucsd.edu/eoc/special_topics/teach/sp_climate_change/images/greenhouse.jpg" width="133" height="169" alt="70 Dayton St">
+          <img ng-src="{{images[3]}}" width="133" height="169" alt="70 Dayton St">
         </td>
         <td>
-          <img src="http://www.south-end-boston.com/images/exterior_pics/3149.jpg" width="133" height="169" alt="70 Dayton St">
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <img src="https://s-media-cache-ak0.pinimg.com/736x/2d/3c/3f/2d3c3f4cb582893b06c5c2495e943403.jpg" width="133" height="169" alt="70 Dayton St">
-        </td>
-        <td>
-          <img src="https://farm1.staticflickr.com/438/20356678226_70e1cae72f_m.jpg" width="133" height="169" alt="70 Dayton St">
-        </td>
-        <td>
-          <img src="https://farm1.staticflickr.com/295/20383441045_019ba90306_m.jpg" width="133" height="169" alt="BackRollar">
-        </td>
-        <td>
-          <img src="https://farm1.staticflickr.com/536/19762511583_22242d2904_m.jpg" width="133" height="169" alt="Beachcomber">
-        </td>
-        <td>
-          <img src="https://farm1.staticflickr.com/507/20196799709_b982f6bbc1_m.jpg" width="133" height="169" alt="Bean Supper">
+          <img ng-src="{{images[4]}}" width="133" height="169" alt="70 Dayton St">
         </td>
       </tr>
 
       <tr>
         <td>
-          <img src="https://farm1.staticflickr.com/268/19762507943_ff0ea1c118_m.jpg" width="133" height="185" alt="Chicken Coop">
+          <img ng-src="{{images[5]}}" width="133" height="169" alt="70 Dayton St">
         </td>
         <td>
-          <img src="https://farm1.staticflickr.com/564/19760769344_543ebb82f0_m.jpg" width="133" height="185" alt="chickadee">
+          <img ng-src="{{images[6]}}" width="133" height="169" alt="70 Dayton St">
         </td>
         <td>
-          <img src="https://farm1.staticflickr.com/427/19762508463_29a53cd5df_m.jpg" width="133" height="185" alt="canada goose">
+          <img ng-src="{{images[7]}}" width="133" height="169" alt="BackRollar">
         </td>
         <td>
-          <img src="https://farm1.staticflickr.com/348/20383434715_ba8202737f_m.jpg" width="133" height="185" alt="Cousins">
+          <img ng-src="{{images[8]}}" width="133" height="169" alt="Beachcomber">
         </td>
         <td>
-          <img src="https://farm4.staticflickr.com/3669/20383434915_b5d78d86aa_m.jpg" width="133" height="185" alt="Corn">
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <img src="https://farm1.staticflickr.com/530/20389595341_c6d81265f6_m.jpg" width="133" height="185" alt="Cormorants">
-        </td>
-        <td>
-          <img src="https://farm1.staticflickr.com/425/20196790389_53c6b94a2b_m.jpg" width="133" height="185" alt="GeorgeCarving">
-        </td>
-        <td>
-          <img src="https://farm1.staticflickr.com/532/20196791229_3c681e8d04_m.jpg" width="133" height="185" alt="GeorgeAnddog">
-        </td>
-        <td>
-          <img src="https://farm1.staticflickr.com/487/20389592441_9f41a44cd2_m.jpg" width="133" height="185" alt="Flowers by George">
-        </td>
-        <td>
-          <img src="https://farm1.staticflickr.com/474/19760764184_155a5e9384_m.jpg" width="133" height="185" alt="fish">
+          <img ng-src="{{images[9]}}" width="133" height="169" alt="Bean Supper">
         </td>
       </tr>
 
       <tr>
         <td>
-          <img src="https://farm4.staticflickr.com/3683/20357180846_2292d829d0_m.jpg" width="133" height="185" alt="Family1950s">
+          <img ng-src="{{images[10]}}" width="133" height="185" alt="Chicken Coop">
         </td>
         <td>
-          <img src="https://farm4.staticflickr.com/3726/20195448908_3f980bac40_m.jpg" width="133" height="185" alt="Elaine">
+          <img ng-src="{{images[11]}}" width="133" height="185" alt="chickadee">
         </td>
         <td>
-          <img src="https://farm1.staticflickr.com/544/20196790619_d81b4e4183_m.jpg" width="133" height="185" alt="duck">
+          <img ng-src="{{images[12]}}" width="133" height="185" alt="canada goose">
         </td>
         <td>
-          <img src="https://farm1.staticflickr.com/506/20195449118_725bcaeee4_m.jpg" width="133" height="185" alt="Driftwood">
+          <img ng-src="{{images[13]}}" width="133" height="185" alt="Cousins">
         </td>
         <td>
-          <img src="https://farm1.staticflickr.com/315/19760763414_954518e06b_m.jpg" width="133" height="185" alt="Don and Luis">
+          <img ng-src="{{images[14]}}" width="133" height="185" alt="Corn">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <img ng-src="{{images[15]}}" width="133" height="185" alt="Cormorants">
+        </td>
+        <td>
+          <img ng-src="{{images[16]}}" width="133" height="185" alt="GeorgeCarving">
+        </td>
+        <td>
+          <img ng-src="{{images[17]}}" width="133" height="185" alt="GeorgeAnddog">
+        </td>
+        <td>
+          <img ng-src="{{images[18]}}" width="133" height="185" alt="Flowers by George">
+        </td>
+        <td>
+          <img ng-src="{{images[19]}}" width="133" height="185" alt="fish">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <img ng-src="{{images[20]}}" width="133" height="185" alt="Family1950s">
+        </td>
+        <td>
+          <img ng-src="{{images[21]}}" width="133" height="185" alt="Elaine">
+        </td>
+        <td>
+          <img ng-src="{{images[22]}}" width="133" height="185" alt="duck">
+        </td>
+        <td>
+          <img ng-src="{{images[23]}}" width="133" height="185" alt="Driftwood">
+        </td>
+        <td>
+          <img ng-src="{{images[24]}}" width="133" height="185" alt="Don and Luis">
         </td>
       </tr>
     </table>
   </div>
+  <footer></footer>
 
   <div class= 'container game-card'>
+    <div class>Georgeria: A Fun Family Bingo Game!</div>
     <table border='1'>
       <tr>
         <td>
-          <img src="http://www.johnlund.com/Images/Elephant-in-the-bar-picture-Photo.jpg" width="133" height="169" alt="70 Dayton St">
+          <img ng-src="{{images2[0]}}" width="133" height="169" alt='{{images2}}'>
         </td>
         <td>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Turtle3m.JPG" width="133" height="169" alt="70 Dayton St">
+          <img ng-src="{{images2[1]}}" width="133" height="169" alt="70 Dayton St">
         </td>
         <td>
-          <img src="http://ichef.bbci.co.uk/naturelibrary/images/ic/credit/640x395/s/sw/swan/swan_1.jpg" width="133" height="169" alt="70 Dayton St">
+          <img ng-src="{{images2[2]}}" width="133" height="169" alt="70 Dayton St">
         </td>
         <td>
-          <img src="http://earthguide.ucsd.edu/eoc/special_topics/teach/sp_climate_change/images/greenhouse.jpg" width="133" height="169" alt="70 Dayton St">
+          <img ng-src="{{images2[3]}}" width="133" height="169" alt="70 Dayton St">
         </td>
         <td>
-          <img src="http://www.south-end-boston.com/images/exterior_pics/3149.jpg" width="133" height="169" alt="70 Dayton St">
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <img src="https://s-media-cache-ak0.pinimg.com/736x/2d/3c/3f/2d3c3f4cb582893b06c5c2495e943403.jpg" width="133" height="169" alt="70 Dayton St">
-        </td>
-        <td>
-          <img src="https://farm1.staticflickr.com/438/20356678226_70e1cae72f_m.jpg" width="133" height="169" alt="70 Dayton St">
-        </td>
-        <td>
-          <img src="https://farm1.staticflickr.com/295/20383441045_019ba90306_m.jpg" width="133" height="169" alt="BackRollar">
-        </td>
-        <td>
-          <img src="https://farm1.staticflickr.com/536/19762511583_22242d2904_m.jpg" width="133" height="169" alt="Beachcomber">
-        </td>
-        <td>
-          <img src="https://farm1.staticflickr.com/507/20196799709_b982f6bbc1_m.jpg" width="133" height="169" alt="Bean Supper">
+          <img ng-src="{{images2[4]}}" width="133" height="169" alt="70 Dayton St">
         </td>
       </tr>
 
       <tr>
         <td>
-          <img src="https://farm1.staticflickr.com/268/19762507943_ff0ea1c118_m.jpg" width="133" height="185" alt="Chicken Coop">
+          <img ng-src="{{images2[5]}}" width="133" height="169" alt="70 Dayton St">
         </td>
         <td>
-          <img src="https://farm1.staticflickr.com/564/19760769344_543ebb82f0_m.jpg" width="133" height="185" alt="chickadee">
+          <img ng-src="{{images2[6]}}" width="133" height="169" alt="70 Dayton St">
         </td>
         <td>
-          <img src="https://farm1.staticflickr.com/427/19762508463_29a53cd5df_m.jpg" width="133" height="185" alt="canada goose">
+          <img ng-src="{{images2[7]}}" width="133" height="169" alt="BackRollar">
         </td>
         <td>
-          <img src="https://farm1.staticflickr.com/348/20383434715_ba8202737f_m.jpg" width="133" height="185" alt="Cousins">
+          <img ng-src="{{images2[8]}}" width="133" height="169" alt="Beachcomber">
         </td>
         <td>
-          <img src="https://farm4.staticflickr.com/3669/20383434915_b5d78d86aa_m.jpg" width="133" height="185" alt="Corn">
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <img src="https://farm1.staticflickr.com/530/20389595341_c6d81265f6_m.jpg" width="133" height="185" alt="Cormorants">
-        </td>
-        <td>
-          <img src="https://farm1.staticflickr.com/425/20196790389_53c6b94a2b_m.jpg" width="133" height="185" alt="GeorgeCarving">
-        </td>
-        <td>
-          <img src="https://farm1.staticflickr.com/532/20196791229_3c681e8d04_m.jpg" width="133" height="185" alt="GeorgeAnddog">
-        </td>
-        <td>
-          <img src="https://farm1.staticflickr.com/487/20389592441_9f41a44cd2_m.jpg" width="133" height="185" alt="Flowers by George">
-        </td>
-        <td>
-          <img src="https://farm1.staticflickr.com/474/19760764184_155a5e9384_m.jpg" width="133" height="185" alt="fish">
+          <img ng-src="{{images2[9]}}" width="133" height="169" alt="Bean Supper">
         </td>
       </tr>
 
       <tr>
         <td>
-          <img src="https://farm4.staticflickr.com/3683/20357180846_2292d829d0_m.jpg" width="133" height="185" alt="Family1950s">
+          <img ng-src="{{images2[10]}}" width="133" height="185" alt="Chicken Coop">
         </td>
         <td>
-          <img src="https://farm4.staticflickr.com/3726/20195448908_3f980bac40_m.jpg" width="133" height="185" alt="Elaine">
+          <img ng-src="{{images2[11]}}" width="133" height="185" alt="chickadee">
         </td>
         <td>
-          <img src="https://farm1.staticflickr.com/544/20196790619_d81b4e4183_m.jpg" width="133" height="185" alt="duck">
+          <img ng-src="{{images2[12]}}" width="133" height="185" alt="canada goose">
         </td>
         <td>
-          <img src="https://farm1.staticflickr.com/506/20195449118_725bcaeee4_m.jpg" width="133" height="185" alt="Driftwood">
+          <img ng-src="{{images2[13]}}" width="133" height="185" alt="Cousins">
         </td>
         <td>
-          <img src="https://farm1.staticflickr.com/315/19760763414_954518e06b_m.jpg" width="133" height="185" alt="Don and Luis">
+          <img ng-src="{{images2[14]}}" width="133" height="185" alt="Corn">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <img ng-src="{{images2[15]}}" width="133" height="185" alt="Cormorants">
+        </td>
+        <td>
+          <img ng-src="{{images2[16]}}" width="133" height="185" alt="GeorgeCarving">
+        </td>
+        <td>
+          <img ng-src="{{images2[17]}}" width="133" height="185" alt="GeorgeAnddog">
+        </td>
+        <td>
+          <img ng-src="{{images2[18]}}" width="133" height="185" alt="Flowers by George">
+        </td>
+        <td>
+          <img ng-src="{{images2[19]}}" width="133" height="185" alt="fish">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <img ng-src="{{images2[20]}}" width="133" height="185" alt="Family1950s">
+        </td>
+        <td>
+          <img ng-src="{{images2[21]}}" width="133" height="185" alt="Elaine">
+        </td>
+        <td>
+          <img ng-src="{{images2[22]}}" width="133" height="185" alt="duck">
+        </td>
+        <td>
+          <img ng-src="{{images2[23]}}" width="133" height="185" alt="Driftwood">
+        </td>
+        <td>
+          <img ng-src="{{images2[24]}}" width="133" height="185" alt="Don and Luis">
         </td>
       </tr>
     </table>
   </div>
+  <footer></footer>
+
+  <div class= 'container game-card'>
+    <div class>Georgeria: A Fun Family Bingo Game!</div>
+    <table border='1'>
+      <tr>
+        <td>
+          <img ng-src="{{images3[0]}}" width="133" height="169" alt='{{images3}}'>
+        </td>
+        <td>
+          <img ng-src="{{images3[1]}}" width="133" height="169" alt="70 Dayton St">
+        </td>
+        <td>
+          <img ng-src="{{images3[2]}}" width="133" height="169" alt="70 Dayton St">
+        </td>
+        <td>
+          <img ng-src="{{images3[3]}}" width="133" height="169" alt="70 Dayton St">
+        </td>
+        <td>
+          <img ng-src="{{images3[4]}}" width="133" height="169" alt="70 Dayton St">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <img ng-src="{{images3[5]}}" width="133" height="169" alt="70 Dayton St">
+        </td>
+        <td>
+          <img ng-src="{{images3[6]}}" width="133" height="169" alt="70 Dayton St">
+        </td>
+        <td>
+          <img ng-src="{{images3[7]}}" width="133" height="169" alt="BackRollar">
+        </td>
+        <td>
+          <img ng-src="{{images3[8]}}" width="133" height="169" alt="Beachcomber">
+        </td>
+        <td>
+          <img ng-src="{{images3[9]}}" width="133" height="169" alt="Bean Supper">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <img ng-src="{{images3[10]}}" width="133" height="185" alt="Chicken Coop">
+        </td>
+        <td>
+          <img ng-src="{{images3[11]}}" width="133" height="185" alt="chickadee">
+        </td>
+        <td>
+          <img ng-src="{{images3[12]}}" width="133" height="185" alt="canada goose">
+        </td>
+        <td>
+          <img ng-src="{{images3[13]}}" width="133" height="185" alt="Cousins">
+        </td>
+        <td>
+          <img ng-src="{{images3[14]}}" width="133" height="185" alt="Corn">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <img ng-src="{{images3[15]}}" width="133" height="185" alt="Cormorants">
+        </td>
+        <td>
+          <img ng-src="{{images3[16]}}" width="133" height="185" alt="GeorgeCarving">
+        </td>
+        <td>
+          <img ng-src="{{images3[17]}}" width="133" height="185" alt="GeorgeAnddog">
+        </td>
+        <td>
+          <img ng-src="{{images3[18]}}" width="133" height="185" alt="Flowers by George">
+        </td>
+        <td>
+          <img ng-src="{{images3[19]}}" width="133" height="185" alt="fish">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <img ng-src="{{images3[20]}}" width="133" height="185" alt="Family1950s">
+        </td>
+        <td>
+          <img ng-src="{{images3[21]}}" width="133" height="185" alt="Elaine">
+        </td>
+        <td>
+          <img ng-src="{{images3[22]}}" width="133" height="185" alt="duck">
+        </td>
+        <td>
+          <img ng-src="{{images3[23]}}" width="133" height="185" alt="Driftwood">
+        </td>
+        <td>
+          <img ng-src="{{images3[24]}}" width="133" height="185" alt="Don and Luis">
+        </td>
+      </tr>
+    </table>
+  </div>
+  <footer></footer>
+
+  <div class= 'container game-card'>
+    <div class>Georgeria: A Fun Family Bingo Game!</div>
+    <table border='1'>
+      <tr>
+        <td>
+          <img ng-src="{{images4[0]}}" width="133" height="169" alt='{{images4}}'>
+        </td>
+        <td>
+          <img ng-src="{{images4[1]}}" width="133" height="169" alt="70 Dayton St">
+        </td>
+        <td>
+          <img ng-src="{{images4[2]}}" width="133" height="169" alt="70 Dayton St">
+        </td>
+        <td>
+          <img ng-src="{{images4[3]}}" width="133" height="169" alt="70 Dayton St">
+        </td>
+        <td>
+          <img ng-src="{{images4[4]}}" width="133" height="169" alt="70 Dayton St">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <img ng-src="{{images4[5]}}" width="133" height="169" alt="70 Dayton St">
+        </td>
+        <td>
+          <img ng-src="{{images4[6]}}" width="133" height="169" alt="70 Dayton St">
+        </td>
+        <td>
+          <img ng-src="{{images4[7]}}" width="133" height="169" alt="BackRollar">
+        </td>
+        <td>
+          <img ng-src="{{images4[8]}}" width="133" height="169" alt="Beachcomber">
+        </td>
+        <td>
+          <img ng-src="{{images4[9]}}" width="133" height="169" alt="Bean Supper">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <img ng-src="{{images4[10]}}" width="133" height="185" alt="Chicken Coop">
+        </td>
+        <td>
+          <img ng-src="{{images4[11]}}" width="133" height="185" alt="chickadee">
+        </td>
+        <td>
+          <img ng-src="{{images4[12]}}" width="133" height="185" alt="canada goose">
+        </td>
+        <td>
+          <img ng-src="{{images4[13]}}" width="133" height="185" alt="Cousins">
+        </td>
+        <td>
+          <img ng-src="{{images4[14]}}" width="133" height="185" alt="Corn">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <img ng-src="{{images4[15]}}" width="133" height="185" alt="Cormorants">
+        </td>
+        <td>
+          <img ng-src="{{images4[16]}}" width="133" height="185" alt="GeorgeCarving">
+        </td>
+        <td>
+          <img ng-src="{{images4[17]}}" width="133" height="185" alt="GeorgeAnddog">
+        </td>
+        <td>
+          <img ng-src="{{images4[18]}}" width="133" height="185" alt="Flowers by George">
+        </td>
+        <td>
+          <img ng-src="{{images4[19]}}" width="133" height="185" alt="fish">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <img ng-src="{{images4[20]}}" width="133" height="185" alt="Family1950s">
+        </td>
+        <td>
+          <img ng-src="{{images4[21]}}" width="133" height="185" alt="Elaine">
+        </td>
+        <td>
+          <img ng-src="{{images4[22]}}" width="133" height="185" alt="duck">
+        </td>
+        <td>
+          <img ng-src="{{images4[23]}}" width="133" height="185" alt="Driftwood">
+        </td>
+        <td>
+          <img ng-src="{{images4[24]}}" width="133" height="185" alt="Don and Luis">
+        </td>
+      </tr>
+    </table>
+  </div>
+  <footer></footer>
+
+  <div class= 'container game-card'>
+    <div class>Georgeria: A Fun Family Bingo Game!</div>
+    <table border='1'>
+      <tr>
+        <td>
+          <img ng-src="{{images5[0]}}" width="133" height="169" alt='{{images5}}'>
+        </td>
+        <td>
+          <img ng-src="{{images5[1]}}" width="133" height="169" alt="70 Dayton St">
+        </td>
+        <td>
+          <img ng-src="{{images5[2]}}" width="133" height="169" alt="70 Dayton St">
+        </td>
+        <td>
+          <img ng-src="{{images5[3]}}" width="133" height="169" alt="70 Dayton St">
+        </td>
+        <td>
+          <img ng-src="{{images5[4]}}" width="133" height="169" alt="70 Dayton St">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <img ng-src="{{images5[5]}}" width="133" height="169" alt="70 Dayton St">
+        </td>
+        <td>
+          <img ng-src="{{images5[6]}}" width="133" height="169" alt="70 Dayton St">
+        </td>
+        <td>
+          <img ng-src="{{images5[7]}}" width="133" height="169" alt="BackRollar">
+        </td>
+        <td>
+          <img ng-src="{{images5[8]}}" width="133" height="169" alt="Beachcomber">
+        </td>
+        <td>
+          <img ng-src="{{images5[9]}}" width="133" height="169" alt="Bean Supper">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <img ng-src="{{images5[10]}}" width="133" height="185" alt="Chicken Coop">
+        </td>
+        <td>
+          <img ng-src="{{images5[11]}}" width="133" height="185" alt="chickadee">
+        </td>
+        <td>
+          <img ng-src="{{images5[12]}}" width="133" height="185" alt="canada goose">
+        </td>
+        <td>
+          <img ng-src="{{images5[13]}}" width="133" height="185" alt="Cousins">
+        </td>
+        <td>
+          <img ng-src="{{images5[14]}}" width="133" height="185" alt="Corn">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <img ng-src="{{images5[15]}}" width="133" height="185" alt="Cormorants">
+        </td>
+        <td>
+          <img ng-src="{{images5[16]}}" width="133" height="185" alt="GeorgeCarving">
+        </td>
+        <td>
+          <img ng-src="{{images5[17]}}" width="133" height="185" alt="GeorgeAnddog">
+        </td>
+        <td>
+          <img ng-src="{{images5[18]}}" width="133" height="185" alt="Flowers by George">
+        </td>
+        <td>
+          <img ng-src="{{images5[19]}}" width="133" height="185" alt="fish">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <img ng-src="{{images5[20]}}" width="133" height="185" alt="Family1950s">
+        </td>
+        <td>
+          <img ng-src="{{images5[21]}}" width="133" height="185" alt="Elaine">
+        </td>
+        <td>
+          <img ng-src="{{images5[22]}}" width="133" height="185" alt="duck">
+        </td>
+        <td>
+          <img ng-src="{{images5[23]}}" width="133" height="185" alt="Driftwood">
+        </td>
+        <td>
+          <img ng-src="{{images5[24]}}" width="133" height="185" alt="Don and Luis">
+        </td>
+      </tr>
+    </table>
+  </div>
+  <footer></footer>
+
+  <div class= 'container game-card'>
+    <div class>Georgeria: A Fun Family Bingo Game!</div>
+    <table border='1'>
+      <tr>
+        <td>
+          <img ng-src="{{images6[0]}}" width="133" height="169" alt='{{images6}}'>
+        </td>
+        <td>
+          <img ng-src="{{images6[1]}}" width="133" height="169" alt="70 Dayton St">
+        </td>
+        <td>
+          <img ng-src="{{images6[2]}}" width="133" height="169" alt="70 Dayton St">
+        </td>
+        <td>
+          <img ng-src="{{images6[3]}}" width="133" height="169" alt="70 Dayton St">
+        </td>
+        <td>
+          <img ng-src="{{images6[4]}}" width="133" height="169" alt="70 Dayton St">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <img ng-src="{{images6[5]}}" width="133" height="169" alt="70 Dayton St">
+        </td>
+        <td>
+          <img ng-src="{{images6[6]}}" width="133" height="169" alt="70 Dayton St">
+        </td>
+        <td>
+          <img ng-src="{{images6[7]}}" width="133" height="169" alt="BackRollar">
+        </td>
+        <td>
+          <img ng-src="{{images6[8]}}" width="133" height="169" alt="Beachcomber">
+        </td>
+        <td>
+          <img ng-src="{{images6[9]}}" width="133" height="169" alt="Bean Supper">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <img ng-src="{{images6[10]}}" width="133" height="185" alt="Chicken Coop">
+        </td>
+        <td>
+          <img ng-src="{{images6[11]}}" width="133" height="185" alt="chickadee">
+        </td>
+        <td>
+          <img ng-src="{{images6[12]}}" width="133" height="185" alt="canada goose">
+        </td>
+        <td>
+          <img ng-src="{{images6[13]}}" width="133" height="185" alt="Cousins">
+        </td>
+        <td>
+          <img ng-src="{{images6[14]}}" width="133" height="185" alt="Corn">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <img ng-src="{{images6[15]}}" width="133" height="185" alt="Cormorants">
+        </td>
+        <td>
+          <img ng-src="{{images6[16]}}" width="133" height="185" alt="GeorgeCarving">
+        </td>
+        <td>
+          <img ng-src="{{images6[17]}}" width="133" height="185" alt="GeorgeAnddog">
+        </td>
+        <td>
+          <img ng-src="{{images6[18]}}" width="133" height="185" alt="Flowers by George">
+        </td>
+        <td>
+          <img ng-src="{{images6[19]}}" width="133" height="185" alt="fish">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <img ng-src="{{images6[20]}}" width="133" height="185" alt="Family1950s">
+        </td>
+        <td>
+          <img ng-src="{{images6[21]}}" width="133" height="185" alt="Elaine">
+        </td>
+        <td>
+          <img ng-src="{{images6[22]}}" width="133" height="185" alt="duck">
+        </td>
+        <td>
+          <img ng-src="{{images6[23]}}" width="133" height="185" alt="Driftwood">
+        </td>
+        <td>
+          <img ng-src="{{images6[24]}}" width="133" height="185" alt="Don and Luis">
+        </td>
+      </tr>
+    </table>
+  </div>
+  <footer></footer>
 
 </div>

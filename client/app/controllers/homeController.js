@@ -5,6 +5,15 @@ angular.module('controllers', [])
   $scope.gameCards = function() {
 
     $state.go('gameCards');
+
+
+  };
+
+  $scope.play = function() {
+
+    $state.go('play');
+
+
   };
 
 });

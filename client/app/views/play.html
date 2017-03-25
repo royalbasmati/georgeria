@@ -1,0 +1,27 @@
+<div ng-controller='playController'>
+
+  <!-- nav bar -->
+  <div class= 'container'>
+      <ul class= 'nav nav-pills nav-fill' style="background-color: #95F2D9;">
+        <li class='nav-item'>
+          <a class="nav-link" ui-sref='home' >Georgeria</a>
+        </li>
+        <li class='nav-item'>
+          <a class="nav-link" href="#">Click George To Start</a>
+        </li>
+        <li class='nav-item'>
+          <a class="nav-link" ui-sref='play'>Restart</a>
+        </li>
+      </ul>
+  </div>
+
+  <!-- Grandpa -->
+  <div class= 'container'>
+    <img class= 'george' src="assets/george.png" ng-click='start()' ng-hide='started'>
+  </div>
+  <div class= 'container'>
+    <img class= 'george' ng-src="{{card}}" ng-click='continue()' ng-show='started'>
+  </div>
+
+  
+</div>
